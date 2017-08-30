@@ -53,7 +53,7 @@ training <- training[, -NZV]
 ```
 
 ##Partitioning Training Dataset
-Partitioning was performed to get a 70% training set, and a 30% test set. This allows 
+Partitioning was performed to get a 70% training set, and a 30% test set. This allows us to use cross-validation.
 ```{r}
 inTrain  <- createDataPartition(training$classe, p=0.7, list=FALSE)
 TrainSet <- training[inTrain, ]

@@ -271,7 +271,7 @@ training &lt;- training[, -NZV]</code></pre>
 </div>
 <div id="partitioning-training-dataset" class="section level2">
 <h2>Partitioning Training Dataset</h2>
-<p>Partitioning was performed to get a 70% training set, and a 30% test set. This allows</p>
+<p>Partitioning was performed to get a 70% training set, and a 30% test set. This allows us to use cross-validation.</p>
 <pre class="r"><code>inTrain  &lt;- createDataPartition(training$classe, p=0.7, list=FALSE)
 TrainSet &lt;- training[inTrain, ]
 TestSet  &lt;- training[-inTrain, ]</code></pre>
